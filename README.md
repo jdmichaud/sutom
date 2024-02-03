@@ -5,7 +5,7 @@ SUTOM (MOTUS) solver.
 ### Usage
 
 ```bash
-git clone 
+git clone <this-repo>
 cd sutom
 zig build
 zig-out/bin/sutom french
