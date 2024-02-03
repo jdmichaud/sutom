@@ -30,7 +30,7 @@ fn loadfile(allocator: std.mem.Allocator, path: []const u8) !struct { buffer: []
   var file = try std.fs.cwd().openFile(path, .{});
   defer file.close();
 
-  const file_size = try file.getEndPos();
+  const file_size: usize = @intCast(try file.getEndPos());
   const buffer = std.os.mmap(
       null,
       file_size,
